@@ -127,3 +127,21 @@
 
 })(jQuery);
 
+
+// pop up screen loader code start
+window.onload = function() {
+    const popup = document.getElementById('popup');
+    popup.classList.add('show'); // Add class to show the pop-up with animation
+}
+
+// Function to close the pop-up when clicked or touched
+function closePopup() {
+    const popup = document.getElementById('popup');
+    popup.classList.remove('show'); // Remove the class to hide the pop-up
+    setTimeout(() => {
+        popup.style.display = 'none'; // Hide the pop-up completely after the animation
+    }, 500); // Wait for animation to finish
+}
+
+// pop up screen loader code end
+

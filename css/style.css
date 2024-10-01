@@ -611,7 +611,6 @@
 }
 /*** Feature End ***/
 
-
 /*** Appointment Start ***/
 .appointment {
     background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(../img/formbanner.jpg);
@@ -1349,3 +1348,76 @@
 	margin-top:16px;
 }
 /* whats app button code end */
+
+/* pop up screen on website load code start */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0; /* Initially invisible */
+    transition: opacity 0.5s ease; /* Smooth fade-in effect */
+}
+
+
+.popup.show {
+    display: flex;
+    opacity: 1;
+}
+
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: slide-down 0.5s ease; /* Animation for content to slide down */
+}
+
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+.editable-content {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    min-height: 100px;
+    cursor: text;
+    outline: none;
+}
+
+
+@media (max-width: 768px) {
+    .popup-content {
+        width: 90%;
+    }
+}
+/* pop up screen on website load code end */
