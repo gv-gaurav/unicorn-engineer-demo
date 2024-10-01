@@ -142,6 +142,14 @@ function closePopup() {
         popup.style.display = 'none'; // Hide the pop-up completely after the animation
     }, 500); // Wait for animation to finish
 }
-
 // pop up screen loader code end
+
+
+
+// search button aniamtion code start
+
+
+
+
+// search button aniamtion code end
 
